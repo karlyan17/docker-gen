@@ -6,7 +6,7 @@ ENV DOWNLOAD_URL https://github.com/jwilder/docker-gen/releases/download/$VERSIO
 ENV DOCKER_HOST unix:///tmp/docker.sock
 
 RUN apk update \
-    && apk add openssl
+    && apk add openssl docker-cli
 
 RUN wget -qO- $DOWNLOAD_URL | tar xvz -C /usr/local/bin
 
